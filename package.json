@@ -1,0 +1,70 @@
+{
+  "name": "SayHi",
+  "version": "0.0.1",
+  "description": "Say hi",
+  "author": {
+    "name": "Daniel Bannert",
+    "email": "info@anolilab.de"
+  },
+  "homepage": "https://github.com/anolilab/sayhi",
+  "main": "sayhi.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anolilab/sayhi.git"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "manager.js",
+    "sayhi.js"
+  ],
+  "bin": {
+    "sayhi": "sayhi.js"
+  },
+  "scripts": {
+    "test": "node node_modules/argg tests/*.js",
+    "cover": "instabul cover --dir reports/coverage node_modules/argg tests/*js",
+    "plato": "plato -d reports/plato index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/anolilab/sayhi/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://anolilab.de/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "ansi-regex": "^1.0.0",
+    "ansi-styles": "^2.0.0",
+    "chalk": "^1.0.0",
+    "minimist": "^1.1.0",
+    "pad-component": "0.0.1",
+    "string-length": "^1.0.0",
+    "strip-ansi": "^2.0.0",
+    "taketalk": "^1.0.0",
+    "word-wrap": "^1.0.0"
+  },
+  "devDependencies": {
+    "jshint-stylish": "^1.0.1",
+    "jsvalidate": "^0.5.5",
+    "npm-check-updates": "^1.5.1"
+  },
+  "keywords": [
+    "anolilab",
+    "ansi",
+    "box",
+    "bin",
+    "cli",
+    "cowsay",
+    "hi",
+    "message",
+    "SayHi",
+    "say"
+  ]
+}
