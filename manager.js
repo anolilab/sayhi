@@ -1,5 +1,5 @@
 (function (definition) {
-    "use strict";
+    'use strict';
 
     // This file will function properly as a <script> tag, or a module
     // using CommonJS and NodeJS or RequireJS module formats. In
@@ -13,10 +13,10 @@
         stripAnsi    = require('strip-ansi'),
         ansiStyles   = require('ansi-styles'),
         ansiRegex    = require('ansi-regex'),
-        config       = 'todo';
+        config       = require('./config.js');
 
     // Montage Require
-    if (typeof bootstrap === "function") {
+    if (typeof bootstrap === 'function') {
         bootstrap('sayhi', definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config));
 
     // CommonJS
@@ -25,7 +25,7 @@
 
     // RequireJS
     } else if (typeof define === 'function' && define.amd) {
-        define(['chalk', 'pad-component', 'word-wrap', 'string-length', 'strip-ansi', 'ansi-styles', 'ansi-regex', 'todo'], definition);
+        define(['chalk', 'pad-component', 'word-wrap', 'string-length', 'strip-ansi', 'ansi-styles', 'ansi-regex', 'config'], definition);
 
     // SES (Secure EcmaScript)
     } else if (typeof ses !== 'undefined') {
@@ -44,14 +44,10 @@
     }
 
 })(function (chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config) {
-    "use strict";
-
-    var topOffset   = 3,
-    leftOffset      = 17,
-    defaultGreeting = 'dd';
+    'use strict';
 
     return function(message, options) {
-        message = (message || 'dd').trim();
+        message = (message || config.message).trim();
         options = options || {};
 
         /**
@@ -152,21 +148,21 @@
                 }, maxLength);
 
                 if (index === 0) {
-                    greeting[topOffset - 1] += frame.top;
+                    greeting[config.topOffset - 1] += frame.top;
                 }
 
-                greeting[index + topOffset] =
-                    (greeting[index + topOffset] || pad.left('', leftOffset)) +
+                greeting[index + config.topOffset] =
+                    (greeting[index + config.topOffset] || pad.left('', config.leftOffset)) +
                     frame.side + ' ' + paddedString + ' ' + frame.side;
 
                 if (array[index + 1] === undefined) {
-                    greeting[index + topOffset + 1] =
-                        (greeting[index + topOffset + 1] || pad.left('', leftOffset)) +
+                    greeting[index + config.topOffset + 1] =
+                        (greeting[index + config.topOffset + 1] || pad.left('', config.leftOffset)) +
                         frame.bottom;
                 }
 
                 return greeting;
-            }, defaultGreeting.split(/\n/))
+            }, config.defaultGreeting.split(/\n/))
             .join('\n') + '\n';
     };
 });

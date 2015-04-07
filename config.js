@@ -1,14 +1,16 @@
 (function (definition) {
-    "use strict";
+    'use strict';
 
     // This file will function properly as a <script> tag, or a module
     // using CommonJS and NodeJS or RequireJS module formats. In
-    // Common/Node/RequireJS, the module exports the SayHi API and when
-    // executed as a simple <script>, it creates a SayHi global instead.
+    // Common/Node/RequireJS, the module exports the sayhi API and when
+    // executed as a simple <script>, it creates a sayhi global instead.
+
+    var options = {};
 
     // Montage Require
-    if (typeof bootstrap === "function") {
-        bootstrap('SayHiConfig', definition(options));
+    if (typeof bootstrap === 'function') {
+        bootstrap('Config', definition(options));
 
     // CommonJS
     } else if (typeof exports === 'object' && typeof module === 'object') {
@@ -23,21 +25,38 @@
         if (!ses.ok()) {
             return;
         } else {
-            ses.makeSayHiConfig = definition(options);
+            ses.makeConfig = definition(options);
         }
 
     // <script>
     } else if (typeof self !== 'undefined') {
-        self.SayHiConfig = definition(options);
+        self.Config = definition(options);
 
     } else {
-        throw new Error('This environment was not anticipated by SayHi. Please file a bug.');
+        throw new Error('This environment was not anticipated by sayhi. Please file a bug.');
     }
 
 })(function (options) {
     var topOffset   = 3,
     leftOffset      = 17,
-    defaultGreeting = 'dd',
+    defaultGreeting =
+    '\n               ,-~~-.____.' + ' ' +
+    '\n              / ()=(()    \\'     + '    ' +
+    '\n             (   (         0'      + '   ' +
+    '\n              \\._\\, ,-----' + "'"  + '    ' +
+    '\n       ##XXXxxxxxxx'             + '            ' +
+    '\n             /   ---' + "'~;"   + '        ' +
+    '\n            /    /~|- '        + '         ' +
+    '\n          =(   ~~  |  '        + '         ' +
+    '\n    /~~~~~~~~~~~~~~~~~~~~~\\'  + '    ' +
+    '\n   /_______________________\\'    + '   ' +
+    '\n  /_________________________\\'   + '  ' +
+    '\n /___________________________\\' + ' ' +
+    '\n    |_____________________|'      + '    ' +
+    '\n    |_____________________|'      + '    ' +
+    '\n    |_____________________|'      + '    ' +
+    '\n    |_____________________|'      + '    ',
+    message         = 'I have a new philosophy. \n I´m only going to dread one day at a time. \n\n Charles M. Schulz',
     config          = {};
 
     if (options.topOffset) {
@@ -52,9 +71,14 @@
         defaultGreeting = options.defaultGreeting;
     }
 
+    if (options.message) {
+        message = options.message;
+    }
+
     config.topOffset       = topOffset;
     config.leftOffset      = leftOffset;
     config.defaultGreeting = defaultGreeting;
+    config.message         = message;
 
     /*!*/
     return config;

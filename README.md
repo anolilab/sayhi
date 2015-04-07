@@ -1,58 +1,48 @@
-## Narrowspark Rising
-Beautiful Grunt task for narrowspark
+## Anolilab sayhi
+Tell Cli what to say.
 
 [![Author](http://img.shields.io/badge/author-@anolilab-blue.svg?style=flat-square)](https://twitter.com/anolilab)
-[![Source Code](http://img.shields.io/badge/source-narrowspark/rising-blue.svg?style=flat-square)](https://github.com/narrowspark/rising)
-[![npm](https://img.shields.io/npm/v/narrowspark-rising.svg?style=flat-square)](https://www.npmjs.com/package/narrowspark-rising)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Source Code](http://img.shields.io/badge/source-anolilab/sayhi-blue.svg?style=flat-square)](https://github.com/anolilab/sayhi)
+[![npm](https://img.shields.io/npm/v/sayhi.svg?style=flat-square)](https://www.npmjs.com/package/sayhi)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 ## Master
-[![Build Status](https://travis-ci.org/narrowspark/rising.svg)](https://travis-ci.org/narrowspark/rising)
-[![David](https://img.shields.io/david/narrowspark/rising.svg?style=flat-square)](https://github.com/narrowspark/rising)
+[![Build Status](https://travis-ci.org/anolilab/sayhi.svg)](https://travis-ci.org/anolilab/sayhi)
+[![David](https://img.shields.io/david/anolilab/sayhi.svg?style=flat-square)](https://github.com/anolilab/sayhi)
 
 ## Develop
 
 ## Introduction
-Rising is a Grunt library that allows you to break up your Gruntfile config by task. For most small projects a single Gruntfile.js is perfect. But as a project grows, the Gruntfile.js can quickly become unmanagable.
+```shell
+var sayhi = require('sayhi');
 
-##Features
-- Each task has its own config file. Example: jshint.js, mocha.js, etc. (TODO, find a faster way to load config files)
-- Auto load all grunt plugins. Thanks to jit-grunt (TODO, add support for top level node_modules folder).
-- Easy task debug (run ```shell grunt debug [task] ```).
-- Display the elapsed execution time of grunt tasks.
-- Check the existence of all files before run a task (soon).
-- Many predefined grunt plugins for php, js, sass, css, fonts, etc. (run ```shell grunt install-[extension] ```)
-- Supports notify, rising notify you, if a grunt task is completed (soon).
-- Supports shell and npm-install through grunt.
-- Supports [CSS Testing with PhantomCSS, PhantomJS, CasperJS)(http://www.phase2technology.com/blog/css-testing-with-phantomcss-phantomjs-casperjs-and-grunt/)
+console.log(sayhi('I have a new philosophy. \n I´m only going to dread one day at a time. \n\n Charles M. Schulz'));
+/*
+               ,-~~-.____.
+              / ()=(()    \    .--------------------------.
+             (   (         0   | I have a new philosophy. |
+              \._\, ,-----'    |  I´m only going to dread |
+       ##XXXxxxxxxx            |    one day at a time.    |
+             /   ---'~;        |                          |
+            /    /~|-          |     Charles M. Schulz    |
+          =(   ~~  |           '--------------------------'
+    /~~~~~~~~~~~~~~~~~~~~~\
+   /_______________________\
+  /_________________________\
+ /___________________________\
+    |_____________________|
+    |_____________________|
+    |_____________________|
+    |_____________________|
+ */
+```
+You can style your text with [chalk](https://github.com/sindresorhus/chalk) before passing it to sayhi.
 
 ## Getting Started
-This plugin requires Grunt.
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install narrowspark-rising --save-dev
-npm install grunt-load-gruntfile --save-dev
+npm install sayhi --save-dev
 ```
-
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
-
-```js
-// Gruntfile.js
-'use strict';
-
-module.exports = function(grunt) {
-  require("grunt-load-gruntfile")(grunt);
-
-  grunt.loadGruntfile("./node_modules/narrowspark-rising/Gruntfile.js");
-};
-```
-
-## Official Documentation
-
-Documentation for the entire framework can be found on the [Narrowspark website](http://narrowspark.de/rising).
 
 ## Contributing
 
@@ -62,10 +52,10 @@ merged. This is to ensure proper review of all the code.
 
 Fork the project, create a feature branch, and send us a pull request.
 
-If you would like to help take a look at the [list of issues](http://github.com/narrowspark/framework/issues).
+If you would like to help take a look at the [list of issues](http://github.com/anolilab/sayhi/issues).
 
 ## Requirements
-grunt, grunt-cli, grunt-contrib-clean, grunt-contrib-nodeunit, grunt-contrib-watch, grunt-debug-task, grunt-extend, grunt-mkdir, grunt-newer, grunt-notify, grunt-npm-install, grunt-shell, jit-grunt, load-grunt-config, load-grunt-tasks, time-grunt
+ansi-regex, ansi-styles, chalk, minimist, pad-component, string-length, strip-ansi, taketalk, word-wrap
 
 ## Authors
 
@@ -73,4 +63,4 @@ Daniel Bannert - <d.bannert@anolilab.de> - <http://www.anolilab.de><br />
 
 ### License
 
-The Narrowspark framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The sayhi is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

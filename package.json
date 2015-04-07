@@ -16,6 +16,7 @@
     "test": "tests"
   },
   "files": [
+    "config.js",
     "manager.js",
     "sayhi.js"
   ],
