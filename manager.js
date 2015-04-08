@@ -3,8 +3,8 @@
 
     // This file will function properly as a <script> tag, or a module
     // using CommonJS and NodeJS or RequireJS module formats. In
-    // Common/Node/RequireJS, the module exports the SayHi API and when
-    // executed as a simple <script>, it creates a SayHi global instead.
+    // Common/Node/RequireJS, the module exports the saysnoop API and when
+    // executed as a simple <script>, it creates a saysnoop global instead.
 
     var chalk        = require('chalk'),
         pad          = require('pad-component'),
@@ -17,7 +17,7 @@
 
     // Montage Require
     if (typeof bootstrap === 'function') {
-        bootstrap('sayhi', definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config));
+        bootstrap('saysnoop', definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config));
 
     // CommonJS
     } else if (typeof exports === 'object' && typeof module === 'object') {
@@ -32,15 +32,15 @@
         if (!ses.ok()) {
             return;
         } else {
-            ses.makesayhi = definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config);
+            ses.makesaysnoop = definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config);
         }
 
     // <script>
     } else if (typeof self !== 'undefined') {
-        self.sayhi = definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config);
+        self.saysnoop = definition(chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config);
 
     } else {
-        throw new Error('This environment was not anticipated by SayHi. Please file a bug.');
+        throw new Error('This environment was not anticipated by saysnoop. Please file a bug.');
     }
 
 })(function (chalk, pad, wrap, stringLength, stripAnsi, ansiStyles, ansiRegex, config) {
