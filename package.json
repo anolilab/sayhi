@@ -1,13 +1,13 @@
 {
-  "name": "sayhi",
-  "version": "0.0.3",
-  "description": "Say hi",
+  "name": "saysnoop",
+  "version": "0.0.4",
+  "description": "Tell snoopy what to say",
   "author": "Daniel Bannert <info@anolilab.de>",
-  "homepage": "https://github.com/anolilab/sayhi",
-  "main": "sayhi.js",
+  "homepage": "https://github.com/anolilab/saysnoop",
+  "main": "saysnoop.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anolilab/sayhi.git"
+    "url": "https://github.com/anolilab/saysnoop.git"
   },
   "directories": {
     "test": "tests"
@@ -15,17 +15,17 @@
   "files": [
     "config.js",
     "manager.js",
-    "sayhi.js"
+    "saysnoop.js"
   ],
   "bin": {
-    "sayhi": "sayhi.js"
+    "saysnoop": "saysnoop.js"
   },
   "scripts": {
     "test": "./nodeunit.js",
     "cover": "instabul cover --dir reports/coverage ./tests/test.js"
   },
   "bugs": {
-    "url": "https://github.com/anolilab/sayhi/issues"
+    "url": "https://github.com/anolilab/saysnoop/issues"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -55,9 +55,9 @@
     "bin",
     "cli",
     "cowsay",
-    "hi",
+    "snoop",
     "message",
-    "SayHi",
+    "saysnoop",
     "say"
   ],
   "license": "MIT"
