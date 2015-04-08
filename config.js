@@ -3,8 +3,8 @@
 
     // This file will function properly as a <script> tag, or a module
     // using CommonJS and NodeJS or RequireJS module formats. In
-    // Common/Node/RequireJS, the module exports the sayhi API and when
-    // executed as a simple <script>, it creates a sayhi global instead.
+    // Common/Node/RequireJS, the module exports the saysnoop API and when
+    // executed as a simple <script>, it creates a saysnoop global instead.
 
     var options = {};
 
@@ -33,7 +33,7 @@
         self.Config = definition(options);
 
     } else {
-        throw new Error('This environment was not anticipated by sayhi. Please file a bug.');
+        throw new Error('This environment was not anticipated by saysnoop. Please file a bug.');
     }
 
 })(function (options) {
