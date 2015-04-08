@@ -1,6 +1,6 @@
 {
   "name": "SayHi",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Say hi",
   "author": {
     "name": "Daniel Bannert",
@@ -54,7 +54,8 @@
   "devDependencies": {
     "jshint-stylish": "^1.0.1",
     "jsvalidate": "^0.5.5",
-    "npm-check-updates": "^1.5.1"
+    "npm-check-updates": "^1.5.1",
+    "nodeunit": "^0.9.1"
   },
   "keywords": [
     "anolilab",

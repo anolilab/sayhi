@@ -60,19 +60,19 @@
     config          = {};
 
     if (options.topOffset) {
-        topOffset = options.topOffset;
+        topOffset          = options.topOffset;
     }
 
     if (options.leftOffset) {
-        leftOffset = options.leftOffset;
+        leftOffset         = options.leftOffset;
     }
 
     if (options.defaultGreeting) {
-        defaultGreeting = options.defaultGreeting;
+        defaultGreeting    = options.defaultGreeting;
     }
 
     if (options.message) {
-        message = options.message;
+        message            = options.message;
     }
 
     config.topOffset       = topOffset;
