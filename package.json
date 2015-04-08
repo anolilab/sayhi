@@ -1,7 +1,7 @@
 {
   "name": "saysnoop",
-  "version": "0.0.3",
-  "description": "Say hi",
+  "version": "0.0.4",
+  "description": "Tell snoopy what to say",
   "author": "Daniel Bannert <info@anolilab.de>",
   "homepage": "https://github.com/anolilab/saysnoop",
   "main": "saysnoop.js",
