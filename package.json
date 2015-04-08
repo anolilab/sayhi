@@ -1,11 +1,8 @@
 {
-  "name": "SayHi",
+  "name": "sayhi",
   "version": "0.0.3",
   "description": "Say hi",
-  "author": {
-    "name": "Daniel Bannert",
-    "email": "info@anolilab.de"
-  },
+  "author": "Daniel Bannert <info@anolilab.de>",
   "homepage": "https://github.com/anolilab/sayhi",
   "main": "sayhi.js",
   "repository": {
@@ -24,19 +21,12 @@
     "sayhi": "sayhi.js"
   },
   "scripts": {
-    "test": "node node_modules/argg tests/*.js",
-    "cover": "instabul cover --dir reports/coverage node_modules/argg tests/*js",
-    "plato": "plato -d reports/plato index.js"
+    "test": "./nodeunit.js",
+    "cover": "instabul cover --dir reports/coverage ./tests/test.js"
   },
   "bugs": {
     "url": "https://github.com/anolilab/sayhi/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://anolilab.de/LICENSE-MIT"
-    }
-  ],
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -52,10 +42,11 @@
     "word-wrap": "^1.0.0"
   },
   "devDependencies": {
+    "istanbul": "^0.3.13",
     "jshint-stylish": "^1.0.1",
     "jsvalidate": "^0.5.5",
-    "npm-check-updates": "^1.5.1",
-    "nodeunit": "^0.9.1"
+    "nodeunit": "^0.9.1",
+    "npm-check-updates": "^1.5.1"
   },
   "keywords": [
     "anolilab",
@@ -68,5 +59,6 @@
     "message",
     "SayHi",
     "say"
-  ]
+  ],
+  "license": "MIT"
 }
